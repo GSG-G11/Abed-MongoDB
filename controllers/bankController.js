@@ -15,9 +15,9 @@ const createBank = async (req, res) => {
 const getBankDonors = async (req, res) => {
   const bankId = req.params.id;
   console.log(bankId);
-  const bank = await Bank.findById(bankId).populate('donors');
 
-  res.send(bank.donors);
+  const bank = await Bank.findById(bankId).populate('donors');
+  res.send(bank);
 };
 
 module.exports = {getBanks, createBank, getBankDonors};
